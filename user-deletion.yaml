@@ -1,0 +1,10 @@
+---
+- name: "deletion of users"
+  hosts: all
+  become: yes
+  tasks:
+    - name: "deletion of user murali"
+      user:
+        name: murali
+        state: absent
+

@@ -1,0 +1,14 @@
+---
+- name: "creation of users"
+  hosts: all
+  become: yes
+  gather_facts: false  # use of this it won't gather servers information as "ok" in above o/p
+  tasks:
+    - name: "creation of user devBatch22"
+      user:
+        name: devBatch22
+        state: present
+    - name: "creation of user devBatch21"
+      user:
+        name: devBatch21
+        state: present

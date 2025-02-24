@@ -1,0 +1,13 @@
+---
+- name: "creation of users"
+  hosts: all
+  become: yes
+  tasks:
+    - name: "creation of user devops10"
+      user:
+        name: devops10
+        state: present
+    - name: "creation of user devops20"
+      user:
+        name: devops20
+        state: present
